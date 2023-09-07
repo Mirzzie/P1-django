@@ -1,49 +1,51 @@
-{% include "base.html" %}
+{% extends "base.html" %}
 {% load static %}
 {% block content %}
-<header class="py-5">
-        <div class="container px-lg-5">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Carousel content here -->
-         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="{% static '/images/i1.jpg' %}" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="{% static '/images/i1.jpg' %}" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src=".{% static '/images/i1.jpg' %}" class="d-block w-100" alt="...">
-          </div>
-        </div>
-         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-           <span class="visually-hidden">Previous</span>
-         </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-</header>
-<div class="container px-5 my-5">
-    <div class="row gx-5 justify-content-center">
-        <div class="col-lg-10 col-xl-7">
-            <div class="text-center">
-                <div class="fs-4 mb-4 fst-italic">"Make every piece of jewelry no longer ordinary,bring unlimited business opportunities to jewelers, and bring visual feast to customers.
-
-                    "</div>
-                <div class="d-flex align-items-center justify-content-center">
-                    <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="...">
-                    <div class="fw-bold">
-                        Tom Ato
-                        <span class="fw-bold text-primary mx-1">/</span>
-                        CEO, Pomodoro
-                    </div>
-                </div>
-            </div>
-        </div>
+<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
     </div>
-</div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Example headline.</h1>
+            <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 {% endblock %}
