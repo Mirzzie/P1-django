@@ -5,15 +5,16 @@ from django.shortcuts import render
 
 def index(request):
     return render(request, 'index.html')
+
 def register(request):
     if request.method == 'POST':
-        Firstname = request.post['Firstname']
-        Lastname = request.post['Lastname']
+        Name = request.post['Name']
         Email = request.post['Email']
         Password = request.post['Password']
         Address = request.post['Address']
-        City = request.post['City']
-        State = request.post['State']
-    return render(request, 'register.html')
+    else:
+        return render(request, 'register.html')
+        
 def login(request):
-    return render(request, 'login.html')
+        return render(request, 'login.html')
+ 
