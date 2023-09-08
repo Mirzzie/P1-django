@@ -16,5 +16,9 @@ def register(request):
         return render(request, 'register.html')
         
 def login(request):
+    if request.method=='POST' :
+        Email = request.post['Email']
+        Password = request.post['Password']
+    else:
         return render(request, 'login.html')
  
