@@ -15,3 +15,5 @@ def register(request):
         City = request.post['City']
         State = request.post['State']
     return render(request, 'register.html')
+def login(request):
+    return render(request, 'login.html')
