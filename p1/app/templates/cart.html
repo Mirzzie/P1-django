@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+    {% load static %}
+    {% block content %}
+   <link href="{% static '/css/cart.css' %}" rel="stylesheet">
+   <script src="{% static '/js/cart.js' %}"defer></script>
+    <div class="container-cart">
+        <div class="links">
+            <a href="#" class="a-flipkart">
+                <div class="flipkart">Flipkart</div>
+            </a>
+            <a href="#" class="a-grocery">
+                <div class="grocery">Grocery</div>
+            </a>
+        </div>
+        <hr class="custom-hr">
+        <div class="cart-items">
+            <div>
+            <img src="{% static '/images/trolley.png' %}" alt="Cart Icon">
+            <h2>Empty Cart</h2>
+            <P>Login to see items you added previously</P></div>
+            <button>Login</button>
+        </div>
+    </div>
+{% endblock %}
