@@ -6,14 +6,14 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'index.html')
 
-def register(request):
+def signup(request):
     if request.method == 'POST':
         Name = request.post['Name']
         Email = request.post['Email']
         Password = request.post['Password']
         Address = request.post['Address']
     else:
-        return render(request, 'register.html')
+        return render(request, 'signup.html')
         
 def login(request):
         return render(request, 'login.html')
