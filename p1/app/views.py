@@ -9,14 +9,19 @@ def index(request):
 def signup(request):
     if request.method == 'POST':
         Name = request.post['Name']
+        Username = request.post['username']
         Email = request.post['Email']
         Password = request.post['Password']
-        Address = request.post['Address']
+        Confirm_password = request.post['cpassword']
     else:
         return render(request, 'signup.html')
-        
-def login(request):
-        return render(request, 'login.html')
- 
+
+def signin(request):
+     if request.method == 'POST':
+        Username = request.post['username']
+        Password = request.post['Password']
+     else:
+      return render(request, 'signin.html')
+
 def cart(request):
     return render(request, 'cart.html')
