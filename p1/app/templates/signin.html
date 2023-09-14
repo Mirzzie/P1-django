@@ -4,12 +4,21 @@
 <link href="{% static '/css/signupin.css' %}" rel="stylesheet">
 <div class=" divv d-flex align-items-center py-4 bg-body-tertiary">
 <main class="form-signin w-100 m-auto">
-<form>
+      {% if messages %}
+      {% for messages in messages  %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{messages}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+     {% endif %}
+<form action="" method="POST">
+  {% csrf_token %}
   <h1 class="h3 mb-3 fw-normal">Sign in</h1>
 
   <div class="form-floating">
-    <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
-    <label for="floatingInput">Email address</label>
+    <input type="username" class="form-control" id="floatingInput" name="username" placeholder="Username">
+    <label for="floatingInput">Username</label>
   </div>
   <div class="form-floating">
     <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
@@ -25,7 +34,7 @@
   <div class="mb-3">
     <a class="btn btn-secondary w-100 py-2" href="{% url 'signup' %}">Don't have an account? Sign up</a>
   </div>
-    <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+    <button class="btn btn-primary w-100 py-2 " data-bs-toggle="modal" type="submit">Sign in</button>
 </form>
 </main>
 </div>

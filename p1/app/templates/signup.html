@@ -4,10 +4,11 @@
 <link href="{% static '/css/signupin.css' %}" rel="stylesheet">
 <div class=" divv d-flex align-items-center py-4 bg-body-tertiary">
 <main class="form-signin w-100 m-auto">
-<form>
+<form action="" method="POST">
+   {% csrf_token %}
   <h1 class="h3 mb-3 fw-normal">Sign up</h1>
   <div class="form-floating">
-    <input type="text" class="form-control" id="floatingName" placeholder="Name">
+    <input type="text" class="form-control" id="floatingName" name="name" placeholder="Name">
     <label for="floatingName">Name</label>
   </div>
 
@@ -26,7 +27,7 @@
     <label for="floatingPassword">Password</label>
   </div>
   <div class="form-floating">
-    <input type="password" class="form-control" id="floatingPassword" name="cpassword" placeholder="confirm Password">
+    <input type="password" class="form-control" id="floatingCPassword" name="cpassword" placeholder="confirm Password">
     <label for="floatingPassword">Confirm password</label>
   </div>
   <button class="btn btn-primary w-100 py-2" type="submit">Sign up</button>
