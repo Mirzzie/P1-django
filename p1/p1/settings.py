@@ -74,13 +74,16 @@ WSGI_APPLICATION = "p1.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),  # Adjust the path as needed
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mini',
+        'USER': 'mirzzie',     # CONFIGURE ACCORDINGLY !
+        'PASSWORD': '1230',
+        'HOST': 'localhost',
     }
 }
 
 # Password validation
-# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
+# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-passsword-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {

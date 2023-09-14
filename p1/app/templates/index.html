@@ -3,6 +3,14 @@
 {% block content %}
 <div class="container px-5">
   <div class="row gx-5 align-items-center justify-content-center mt-5 ">
+          {% if messages %}
+      {% for messages in messages  %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{messages}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+     {% endif %}
     <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
