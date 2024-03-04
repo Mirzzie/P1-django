@@ -6,4 +6,4 @@ def index(request):
 
 
 def cart(request):
-    return render(request, 'store/ cart.html')
+    return render(request, 'store/cart.html')

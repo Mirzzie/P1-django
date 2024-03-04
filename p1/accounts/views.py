@@ -17,15 +17,15 @@ def signup(request):
         confirm_password = request.POST['cpassword']
 
         if password != confirm_password:
-            return render(request, 'signup.html')
+            return render(request, 'accounts/signup.html')
         messages.error(request, "Password do not match !!")
 
         user = User.objects.create_user(username, email, password)
         user.save()
 
-        return redirect('signin')
+        return redirect('accounts:signin')
     else:
-        return render(request, 'signup.html')
+        return render(request, 'accounts/signup.html')
 
 
 def signin(request):
@@ -37,12 +37,12 @@ def signin(request):
         if user is not None:
             login(request, user)
             messages.success(request, "signed in success!!")
-            return redirect('index')
+            return redirect('store:index')
         else:
             messages.error(request, "Password do not match !!")
-            return render(request, 'signin.html')
+            return render(request, 'acounts/signin.html')
     else:
-        return render(request, 'signin.html')
+        return render(request, 'accounts/signin.html')
 
 
 
@@ -50,4 +50,4 @@ def signin(request):
 def logout_user(request):
     logout(request)
     messages.success(request, "logged out!!")
-    return redirect('signin')
+    return redirect('accounts:signin')
